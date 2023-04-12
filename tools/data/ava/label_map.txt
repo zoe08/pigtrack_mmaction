@@ -1,0 +1,7 @@
+1: stand
+2: lie
+3: eat
+4: drink
+5: fight
+6: playwith toy
+7: sit

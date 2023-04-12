@@ -1,0 +1,73 @@
+#pytorch 1.8.0
+#torchvision 0.9.0
+#mmaction 0.22.0
+#mmdetection 2.20.0
+#mmcv 1.4.5
+
+安装mmcv与ffmpeg
+安装mmdet与mmaction2并测试
+ava数据集格式讲解
+自定义ava数据集
+训练mmaction2
+
+
+conda create -n mmact python=3.8
+conda activate mmact
+conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
+
+
+进入虚拟环境
+1、安装mmcv
+    pip install mmcv_full-1.4.5-cp38-cp38-win_amd64.whl
+
+2、安装ffmpeg
+	将解压后的bin目录添加到系统环境变量，cmd输入ffmpeg有命令提示则成功
+
+3、安装mmaction
+   cd mmaction2-master
+   pip install -r requirements.txt
+   python setup.py develop
+   
+4、安装mmdet
+   cd mmdetection-2.20.0
+   conda install git
+   pip install -r requirements.txt
+   (如果上一步报关于mmtrack的错误，是网络原因，pip install git+https://github.com/open-mmlab/mmtracking#egg=mmtrack)
+   (如果上一步报关于error: Microsoft Visual C++ 14.0 or greater is required，默认安装VisualCppBuildToolsFull.exe）
+   python setup.py develop
+
+
+#测试
+1、下载权重文件，修改路径并运行
+2、在demo\webcam_demo_spatiotemporal_det.py中修改mmaction与mmdet的config、checkpoints
+3、模仿更改input-video、label-map、out-filename、show、output-fps
+4、最后运行，能看到画面就测试成功
+
+#制作自己数据集
+1、在data/videos中放置视频
+2、在video2img.py中根据你的数据集修改start和seconds并运行
+3、通过via3来对labelframes中的图片打标签，导出via3标签的csv
+4、在via2ava.py修改你via3标签的csv路径并运行
+
+# 训练
+1、在configs/detection/ava/中选择你想要的训练的py文件，根据你的数据集修改：
+	1.大约在60行处的一堆文件路径
+	3.在大约35-40行处bbox_head字典增加topk=(1,5),如果你的类别小于5，将5改成小于你类别数的值，建议直接全部改成1
+	3.大约在120-150行有data大字典的配置，train和val字典都增加：timestamp_start，timestamp_end，num_classes，start_index=1
+	4.修改所有的num_classes，数值等于你的类别数+1，一个文件有好几个num_classes
+	5.根据你的数据集修改第4点的参数
+2、在tools/train.py中将config改为你刚刚选择的py文件路径，指定你的work-dir，开启validate，设置gpus和ids并运行
+
+#验证
+1、实际上如果训练开启validate，那么就会在设置的固定epoch进行验证。
+2、如果要单独预测视频或者摄像头，仿照测试步骤，但记得修改labelmap.txt的路径
+
+
+
+
+
+
+
+
+
+
