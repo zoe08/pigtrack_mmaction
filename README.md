@@ -1,6 +1,6 @@
 # 基于PigsTrack跟踪器的群养生猪多目标跟踪与行为识别
   <div align="center">
-    <b><font size="5">OpenMMLab website</font></b>
+    <b><font size="5">我的博客</font></b>
     <sup>
       <a href="https://blog.csdn.net/weixin_40594084?type=blog">
         <i><font size="4">HOT</font></i>
@@ -17,8 +17,6 @@
 </div>
 
 ## Introduction
-
-English | [简体中文](/README_zh-CN.md)
 
 [![Documentation](https://readthedocs.org/projects/mmaction2/badge/?version=latest)](https://mmaction2.readthedocs.io/en/latest/)
 [![actions](https://github.com/open-mmlab/mmaction2/workflows/build/badge.svg)](https://github.com/open-mmlab/mmaction2/actions)
