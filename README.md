@@ -1,18 +1,9 @@
-<div align="center">
-  <img src="https://github.com/open-mmlab/mmaction2/raw/master/resources/mmaction2_logo.png" width="600"/>
-  <div>&nbsp;</div>
+# 基于PigsTrack跟踪器的群养生猪多目标跟踪与行为识别
   <div align="center">
     <b><font size="5">OpenMMLab website</font></b>
     <sup>
-      <a href="https://openmmlab.com">
+      <a href="https://blog.csdn.net/weixin_40594084?type=blog">
         <i><font size="4">HOT</font></i>
-      </a>
-    </sup>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <b><font size="5">OpenMMLab platform</font></b>
-    <sup>
-      <a href="https://platform.openmmlab.com">
-        <i><font size="4">TRY IT OUT</font></i>
       </a>
     </sup>
   </div>
