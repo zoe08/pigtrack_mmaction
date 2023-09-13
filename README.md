@@ -33,8 +33,8 @@ The master branch works with **PyTorch 1.3+**.
 
 <div align="center">
   <div style="float:left;margin-right:10px;">
-  <img src="https://github.com/open-mmlab/mmaction2/raw/master/resources/mmaction2_overview.gif" width="380px"><br>
-    <p style="font-size:1.5vw;">Action Recognition Results on Kinetics-400</p>
+  <img src="https://github.com/zoe08/pigtrack_mmaction/blob/master/pigtrack.gif" width="380px"><br>
+    <p style="font-size:1.5vw;">利用PigsTrack跟踪器实现多目标跟踪</p>
   </div>
   <div style="float:right;margin-right:0px;">
   <img src="https://user-images.githubusercontent.com/34324155/123989146-2ecae680-d9fb-11eb-916b-b9db5563a9e5.gif" width="380px"><br>
